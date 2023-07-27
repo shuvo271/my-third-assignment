@@ -6,52 +6,72 @@
     <html data-theme="light"></html>
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    .fonts-lato {
+      font-family: 'Lato', sans-serif;
+    }
+  </style>
     
 </head>
 
 <body>
     <header class="container mx-auto mb-60">
-        <!-- navbar start-->
-        <div class="navbar bg-error rounded-full mt-10 mb-10 min-h-max justify-between">
+        <!-- navbar start large -->
+        <div class="navbar bg-[#f85559] rounded-full mt-10 mb-10 min-h-max justify-between sm:hidden">
             <div class="item gap-5 text-white mx-10 justify-start cursor-pointer">
-                <a>Homepage</a>
-                <a>Portfolio</a>
-                <a>About</a>
-                <a>About</a>
+                <a>Home</a>
+                <a>About Us</a>
+                <a>Shop</a>
+                <a>All Fruits</a>
             </div>
 
             <div class="gap-5 flex justify-center">
               <img src="./images/logo.png" alt="">
-              <span class="text-white text-600">Fruit Burst</span>
+              <span class="text-white font-Lato text-600">Fruit Burst</span>
             </div>
             <div class="w-[350px] border-none rounded-full flex items-end space-x-3 relative mx-5">
               <input 
               class="w-full rounded-full bg-white outline-0 py-2 px-8 text-xs"
               type="text" placeholder="Search here">
-              <i class="fa-solid fa-magnifying-glass py-2 text-gray-500 absolute"></i>
+              <i class="fa-solid fa-magnifying-glass py-2 text-gray-500 absolute right-4"></i>
              
           </div>
-<!-- 
-            <div class="search">
-                <input type="text" placeholder="Search" class="rounded-2xl w-60 h-8 mr-10" />
-              </div> -->
             </div>
-
+              <!-- small-device -->
+            <div class="navbar lg:invisible block bg-base-100 justify-between">
+              <div class="flex">
+                <div><img class="h-10" src="./images/logo.png" alt=""></div>
+                <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+              </div>
+              <div class="flex">
+                <button class="btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+              </div>
+              
+              </div>
+            
             <!-- navbar end-->
+
+          
 
             <!-- banner start-->
           <section>
-            <div class="carousel min-w-full relative">
+            <div class="carousel sm:min-h-screen min-w-full relative">
                 <div id="slide1" class="carousel-item relative w-full">
-                  <div class="hero min-h-screen" style="background-image: url('./images/banner2.png');">
+                  <div class="hero" style="background-image: url('./images/banner2.png');">
                   <div class="hero-overlay bg-opacity-10"></div>
                     <div class="hero-content text-center text-neutral-content">
                         <div class="max-w-md">
                         <h1 class="mb-5 text-4xl font-bold text-white">Exotic tastes at your doorstep</h1>
                         <p class="mb-5 text-white">We supply highly quality organic products</p>
-                        <button class="bg-error text-white w-28 h-12">Shop Now</button>
+                        <button class="bg-[#f85559] text-white w-28 h-12">Shop Now</button>
                         </div>
                     </div>
                 </div>
@@ -67,7 +87,7 @@
                         <div class="max-w-md">
                             <h1 class="mb-5 text-4xl font-bold text-white">Exotic tastes at your doorstep</h1>
                             <p class="mb-5 text-white">We supply highly quality organic products</p>
-                            <button class="bg-error text-white w-28 h-12">Shop Now</button>
+                            <button class="bg-[#f85559] text-white w-28 h-12">Shop Now</button>
                         </div>
                     </div>
                 </div>
@@ -78,7 +98,7 @@
                 </div> 
               </div> 
               <!-- bonus-part -->
-              <div class="flex justify-between text-center drop-shadow-lg bg-white p-8 w-10/12 ml-20 -mt-32 absolute">
+              <div class="flex justify-between text-center drop-shadow-lg bg-white p-8 w-10/12 ml-20 -mt-28  md:visible invisible absolute ">
                <div>
                   <img src="./images/fruit1.png" alt="">
                   <span>Strawberry</span>
@@ -106,13 +126,14 @@
 
     <main>
             <!-- text-clock start -->
-        <section class="container mx-auto flex justify-between mb-10">
+        <!-- <section class="container mx-auto flex sm:flex-row flex-col text-center sm:text-left justify-between mb-10 lg:flex-row"> -->
+          <div class="container mx-auto flex p-5 flex-col sm:flex-row  text-center sm:text-left justify-between  items-center lg:flex-row mb-10">
             <div>
                   <h1 class="font-bold text-3xl mb-2 justify-start">Deal of the day</h1>
                   <span class="text-base">Contrary to popular belief, is not simply random text. It has roots in a piece of classical <br> Latin literature from 45 BC, making it over 2000 years old.</span>
             </div>
 
-            <div class="font-bold">
+            <div class="font-bold mt-10">
               <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
                 <div class="flex flex-col">
                   <span class="countdown font-mono text-5xl">
@@ -140,108 +161,442 @@
                 </div>
               </div>
             </div>
+          </div>
         </section>
-        <!-- text-clock end -->
+        
+      <div class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-9 container mx-auto">
+        <!-- first card -->
+        <div class="card  bg-base-100 shadow-xl">
+          <figure class="px-10 pt-10">
+            <img src="./images/fruit6.png" alt="Shoes" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center space-y-3">
+            <h4 class="text-2xl font-semibold">12.90$ - 18.85$</h4>
+            <hr class="bg-[#d5d3d3] h-0.1 w-60">
+            <p class="text-xs font-medium">Apples</p>
+            <div class="rating rating-md">
+              <input type="radio" name="rating-7" class="mask mask-star-2 bg-error" />
+              <input type="radio" name="rating-7" class="mask mask-star-2 bg-error" checked/>
+              <input type="radio" name="rating-7" class="mask mask-star-2 bg-error" />
+              <input type="radio" name="rating-7" class="mask mask-star-2 bg-error" />
+              <input type="radio" name="rating-7" class="mask mask-star-2 bg-error" />
+            </div>
+            <div >
+              <!-- Open the modal using ID.showModal() method -->
+              <button class="btn text-[#F85559]" onclick="my_modal_1.showModal()">Details</button>
+              <dialog id="my_modal_1" class="modal_1">
+                <form method="dialog" class="modal-box_1">
+                 
+                  <div class="flex flex-col space-y-3 justify-center items-center p-4">
+                    <img src="./images/fruit6.png" alt="Shoes" class="rounded-xl" />
+                  <p class="text-xl font-medium">Apples</p>
+                  <p class="text-xs">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                  <div class="rating">
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                    <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+      
+                  </div>
+                  <div>
+                    <button class="btn text-white bg-[#F85559]">Close</button>
+                  <button class="btn text-white bg-[#F85559]">Buy Now</button>
+                  </div>
+                  </div>
 
-        <!-- card-section start-->
-        <section class="container mx-auto flex justify-center mb-10">
-          <div>
-            <div class="card w-80 h-96 bg-base-100 shadow-xl gap-2">
-              <figure class="px-10 pt-10">
-                <img src="./images/fruit6.png" alt="Shoes" class="rounded-xl" />
-              </figure>
-              <div class="card-body items-center text-center py-8">
-                <h2 class="card-title">12.90$ - 18.85$</h2>
-                <p class="">Apples</p>
+                  <div class="modal-action">
+                    <!-- if there is a button in form, it will close the modal -->
+                    
+                  </div>
+                </form>
+              </dialog>
+            </div>
+          </div>
+        </div>
+       <!-- second card -->
+       <div class="card  bg-base-100 shadow-xl">
+        <figure class="px-10 pt-10">
+          <img src="./images/fruit7.png" alt="Shoes" class="rounded-xl" />
+        </figure>
+        <div class="card-body items-center text-center space-y-3">
+          <h4 class="text-2xl font-semibold">12.90$ - 18.85$</h4>
+          <hr class="bg-[#d5d3d3] h-0.1 w-60">
+          <p class="text-xs font-medium">Orange</p>
+          <div class="rating">
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+
+          </div>
+          <div >
+            <!-- Open the modal using ID.showModal() method -->
+            <button class="btn text-[#f04245]" onclick="my_modal_2.showModal()">Details</button>
+            <dialog id="my_modal_2" class="modal-2">
+              <form method="dialog" class="modal-box-2">
+               
+                <div class="flex flex-col space-y-3 justify-center items-center p-4">
+                  <img src="./images/fruit7.png" alt="Shoes" class="rounded-xl" />
+                <p class="text-xl font-medium">Orange</p>
+                <p class="text-xs">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
                 <div class="rating">
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+    
                 </div>
-                <div class="card-actions">
-                  <a class="text-red-500" href="">Details</a>
+                <div>
+                  <button class="btn text-white bg-[#F85559]">Close</button>
+                <button class="btn text-white bg-[#F85559]">Buy Now</button>
                 </div>
-              </div>
-            </div>
+                </div>
+
+                <div class="modal-action">
+                  <!-- if there is a button in form, it will close the modal -->
+                  
+                </div>
+              </form>
+            </dialog>
           </div>
-          <div>
-            <div class="card w-80 h-96 bg-base-100 shadow-xl">
-              <figure class="px-10 pt-10">
-                <img src="./images/fruit7.png" alt="Shoes" class="rounded-xl" />
-              </figure>
-              <div class="card-body items-center text-center">
-                <h2 class="card-title">12.90$ - 18.85$</h2>
-                <p>Orange</p>
+        </div>
+      </div>
+      <!-- third card -->
+      <div class="card  bg-base-100 shadow-xl">
+        <figure class="px-10 pt-10">
+          <img src="./images/fruit8.png" alt="Shoes" class="rounded-xl" />
+        </figure>
+        <div class="card-body items-center text-center space-y-3">
+          <h4 class="text-2xl font-semibold">12.90$ - 18.85$</h4>
+          <hr class="bg-[#d5d3d3] h-0.1 w-60">
+          <p class="text-xs font-medium">Red Dragon</p>
+          <div class="rating">
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+
+          </div>
+          <div >
+            <!-- Open the modal using ID.showModal() method -->
+            <button class="btn text-[#F85559]" onclick="my_modal_3.showModal()">Details</button>
+            <dialog id="my_modal_3" class="modal_3">
+              <form method="dialog" class="modal-box_3">
+               
+                <div class="flex flex-col space-y-3 justify-center items-center p-4">
+                  <img src="./images/fruit8.png" alt="Shoes" class="rounded-xl" />
+                <p class="text-xl font-medium">Red Dragon</p>
+                <p class="text-xs">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
                 <div class="rating">
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
                   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+    
                 </div>
-                <div class="card-actions">
-                  <a class="text-red-500" href="">Details</a>
+                <div>
+                  <button class="btn text-white bg-[#f85559]">Close</button>
+                <button class="btn text-white bg-[#42dd76]">Buy Now</button>
                 </div>
-              </div>
-            </div>
-          </div>
+                </div>
 
-        <div>
-          <div class="card w-80 h-96 bg-base-100 shadow-xl">
-            <figure class="px-10 pt-10">
-              <img src="./images/fruit8.png" alt="Shoes" class="rounded-xl" />
-            </figure>
-            <div class="card-body items-center text-center">
-              <h2 class="card-title">12.90$ - 18.85$</h2>
-              <p>Red Dragon</p>
-              <div class="rating">
-                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
-                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-              </div>
-              <div class="card-actions">
-                <a class="text-red-500" href="">Details</a>
-              </div>
-            </div>
+                <div class="modal-action">
+                  <!-- if there is a button in form, it will close the modal -->
+                  
+                </div>
+              </form>
+            </dialog>
           </div>
         </div>
-        <div>
-          <div class="card w-80 h-96 bg-base-100 shadow-xl">
-            <figure class="px-10 pt-10">
-              <img src="./images/fruit9.png" alt="Shoes" class="rounded-xl" />
-            </figure>
-            <div class="card-body items-center text-center">
-              <h2 class="card-title">12.90$ - 18.85$</h2>
-              <p>Banana</p>
-              <div class="rating">
-                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400"  checked/>
-                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-                <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-              </div>
-              <div class="card-actions">
-                <a class="text-red-500" href="">Details</a>
-              </div>
-            </div>
+      </div>
+      <!-- fourth card -->
+      <div class="card  bg-base-100 shadow-xl">
+        <figure class="px-10 pt-10">
+          <img src="./images/fruit9.png" alt="Shoes" class="rounded-xl" />
+        </figure>
+        <div class="card-body items-center text-center space-y-3">
+          <h4 class="text-2xl font-semibold">12.90$ - 18.85$</h4>
+          <hr class="bg-[#d5d3d3] h-0.1 w-60">
+          <p class="text-xs font-medium">Banana</p>
+          <div class="rating">
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+
+          </div>
+          <div >
+            <!-- Open the modal using ID.showModal() method -->
+            <button class="btn text-[#F85559]" onclick="my_modal_4.showModal()">Details</button>
+            <dialog id="my_modal_4" class="modal_4">
+              <form method="dialog" class="modal-box_4">
+               
+                <div class="flex flex-col space-y-3 justify-center items-center p-4">
+                  <img src="./images/fruit9.png" alt="Shoes" class="rounded-xl" />
+                <p class="text-xl font-medium">Banana</p>
+                <p class="text-xs">Professional employees are there for you to pick the most amazing and fresh fruits.</p>
+                <div class="rating">
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+    
+                </div>
+                <div>
+                  <button class="btn text-white bg-[#F85559]">Close</button>
+                <button class="btn text-white bg-[#F85559]">Buy Now</button>
+                </div>
+                </div>
+
+                <div class="modal-action">
+                  <!-- if there is a button in form, it will close the modal -->
+                  
+                </div>
+              </form>
+            </dialog>
           </div>
         </div>
-        </section>
-        <div class="justify-center flex">
-          <button class="bg-error text-white w-24 h-10 rounded">Shop All</button>
+      </div>
+      </div>
+      
+    </section>
+     <div class="flex justify-center items-center mt-7">
+         <button class="btn bg-[#F85559] text-white">Shop All</button>
+     </div>
+     <!-- team section -->
+     <section class="mt-9 container mx-auto">
+      <div class="hero h-auto" style="background-image: url(/images/team.png);">
+        <div class="hero-overlay bg-opacity-60"></div>
+        <div class="hero-content text-center text-neutral-content">
+          <div class=" space-y-10 mt-10">
+            <!-- team content -->
+            <div class="pl-20 pr-20 space-y-5">
+                <h3 class="text-5xl font-extrabold text-white">Meet the team section</h3>
+                <p class="text-xl text-white font-medium">Contrary to popular belief, is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+            </div>
+            <!-- team -members-profile -->
+               <div class="grid gap-9 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+                <!-- first member -->
+                <div class="flex flex-col justify-center items-center mt-3">
+                    <img src="./images/member1.png" alt="">
+                    <h1>Awlad Hossain</h1>
+                    <p>Fruits Expert</p>
+                    <!-- icons part -->
+                    <div class="flex gap-3 mt-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <g clip-path="url(#clip0_43_920)">
+                          <path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="#F85559"/>
+                          <path d="M15.8017 10.5791L15.5604 12.6695C15.5503 12.7649 15.5056 12.8533 15.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV362 12.9046 19.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV3591 19.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV2531 10.2272 19.2164V13.02H8.59081C8.53941 13.0195 8.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV23175 12.7746C8.21258 12.7269 8.20299 12.6759 8.20353 12.6245L8.19535 10.5341C8.19463 10.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV1883 8.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV6581 4.5H15.3299C15.3816 4.50053 15.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV6906 4.74716C15.7098 4.79517 15.7193 4.84649 15.7185 4.89818V6.65727C15.7193 6.70896 15.7098 6.76028 15.6906 6.8083C15.6714 6.85631 15.643 6.90007 15.6069 6.93706C15.5708 6.97405 15.5277 7.00355 15.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV38909V10.1359H15.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV3131 15.7722 10.3622 15.7882 10.4152C15.8043 10.4683 15.8088 10.5241 15.8017 10.5791Z" fill="white"/>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_43_920">
+                            <rect width="24" height="24" fill="white"/>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <g clip-path="url(#clip0_13_3231)">
+                          <path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="#F85559"/>
+                          <path d="M19.773 7.17948C19.1883 7.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV0306 6.55299 17.3178 6.69317C16.881 6.22603 16.3137 5.90115 15.6898 5.76078C15.0658 5.6204 14.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV8041 8.87211C11.8018 9.11622 11.8267 9.35982 11.8783 9.59843C10.6104 9.53615 9.36981 9.20709 8.23771 8.63274C7.1056 8.05839 6.10739 7.25167 5.30829 6.26527C4.89754 6.96697 4.77029 7.79905 4.95254 8.59143C5.13478 9.38382 5.61278 10.0767 6.28881 10.5284C5.78422 10.5148 5.29031 10.38 4.84881 10.1353V10.17C4.85023 10.9055 5.10482 11.6181 5.56978 12.188C6.03474 12.7579 6.68172 13.1504 7.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV16832 13.9826 6.56559 14.5357 7.09913 14.9332C7.63268 15.3307 8.27629 15.5532 8.94145 15.57C7.81427 16.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV3227 9.12618 18.3158C14.992 18.3158 18.1988 13.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV17948Z" fill="white"/>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_13_3231">
+                            <rect width="24" height="24" fill="white"/>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <g clip-path="url(#clip0_13_3237)">
+                          <path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="#F85559"/>
+                          <path d="M9.31598 7.63737C9.31629 7.96166 9.2204 8.27875 9.04043 8.54851C8.86046 8.81828 8.6045 9.02859 8.30496 9.15284C8.00542 9.27708 7.67575 9.30967 7.35768 9.24648C7.03961 9.18329 6.74743 9.02716 6.51812 8.79786C6.28882 8.56855 6.13269 8.27637 6.0695 7.9583C6.00631 7.64023 6.0389 7.31056 6.16315 7.01102C6.28739 6.71148 6.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV83595 6.48004C9.14292 6.78701 9.31556 7.20324 9.31598 7.63737Z" fill="white"/>
+                          <path d="M8.54064 9.95844H6.81643C6.59232 9.95844 6.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV8183 8.94643 17.5942V10.3642C8.94643 10.1401 8.76476 9.95844 8.54064 9.95844Z" fill="white"/>
+                          <path d="M17.9605 14.1268V17.6274C17.9605 17.7262 17.9213 17.821 17.8514 17.8909C17.7815 17.9607 17.6867 18 17.5879 18H15.7374C15.6385 18 15.5438 17.9607 15.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV0253C12.9016 12.0253 12.6695 13.1968 12.6205 13.7226V17.6353C12.6185 17.7322 12.5787 17.8245 12.5098 17.8926C12.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV9534 10.2312 17.926 10.1966 17.8913C10.1619 17.8567 10.1345 17.8155 10.1158 17.7702C10.0972 17.7249 10.0877 17.6764 10.0879 17.6274V10.3326C10.0877 10.2836 10.0972 10.2349 10.1158 10.1895C10.1344 10.1442 10.1619 10.1029 10.1965 10.0681C10.2311 10.0333 10.2722 10.0058 10.3176 9.98693C10.3629 9.96811 10.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV0309 12.5198 10.0658C12.5552 10.1006 12.5833 10.1421 12.6025 10.188C12.6217 10.2338 12.6316 10.283 12.6316 10.3326V10.9642C13.0547 10.3326 13.6832 9.84 15.0205 9.84C17.9779 9.83842 17.9605 12.6063 17.9605 14.1268Z" fill="white"/>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_13_3237">
+                            <rect width="24" height="24" fill="white"/>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </div>
+                </div>
+              <!-- second member -->
+              <div>
+                <div class="flex flex-col justify-center items-center mt-3">
+                  <img src="./images/member2.png" alt="">
+                  <h1>Safia Chowdhury</h1>
+                  <p>Fruits Expert</p>
+                  <!-- icons part -->
+                  <div class="flex gap-3 mt-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <g clip-path="url(#clip0_13_3226)">
+                        <path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="#F85559"/>
+                        <path d="M15.8017 10.5791L15.5604 12.6695C15.5503 12.7649 15.5056 12.8533 15.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV362 12.9046 19.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV3591 19.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV2531 10.2272 19.2164V13.02H8.59081C8.53941 13.0195 8.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV23175 12.7746C8.21258 12.7269 8.20299 12.6759 8.20353 12.6245L8.19535 10.5341C8.19463 10.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV1883 8.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV6581 4.5H15.3299C15.3816 4.50053 15.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV6906 4.74716C15.7098 4.79517 15.7193 4.84649 15.7185 4.89818V6.65727C15.7193 6.70896 15.7098 6.76028 15.6906 6.8083C15.6714 6.85631 15.643 6.90007 15.6069 6.93706C15.5708 6.97405 15.5277 7.00355 15.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV38909V10.1359H15.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV3131 15.7722 10.3622 15.7882 10.4152C15.8043 10.4683 15.8088 10.5241 15.8017 10.5791Z" fill="white"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_13_3226">
+                          <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <g clip-path="url(#clip0_13_3231)">
+                        <path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="#F85559"/>
+                        <path d="M19.773 7.17948C19.1883 7.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV0306 6.55299 17.3178 6.69317C16.881 6.22603 16.3137 5.90115 15.6898 5.76078C15.0658 5.6204 14.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV8041 8.87211C11.8018 9.11622 11.8267 9.35982 11.8783 9.59843C10.6104 9.53615 9.36981 9.20709 8.23771 8.63274C7.1056 8.05839 6.10739 7.25167 5.30829 6.26527C4.89754 6.96697 4.77029 7.79905 4.95254 8.59143C5.13478 9.38382 5.61278 10.0767 6.28881 10.5284C5.78422 10.5148 5.29031 10.38 4.84881 10.1353V10.17C4.85023 10.9055 5.10482 11.6181 5.56978 12.188C6.03474 12.7579 6.68172 13.1504 7.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV16832 13.9826 6.56559 14.5357 7.09913 14.9332C7.63268 15.3307 8.27629 15.5532 8.94145 15.57C7.81427 16.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV3227 9.12618 18.3158C14.992 18.3158 18.1988 13.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV17948Z" fill="white"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_13_3231">
+                          <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <g clip-path="url(#clip0_13_3237)">
+                        <path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="#F85559"/>
+                        <path d="M9.31598 7.63737C9.31629 7.96166 9.2204 8.27875 9.04043 8.54851C8.86046 8.81828 8.6045 9.02859 8.30496 9.15284C8.00542 9.27708 7.67575 9.30967 7.35768 9.24648C7.03961 9.18329 6.74743 9.02716 6.51812 8.79786C6.28882 8.56855 6.13269 8.27637 6.0695 7.9583C6.00631 7.64023 6.0389 7.31056 6.16315 7.01102C6.28739 6.71148 6.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV83595 6.48004C9.14292 6.78701 9.31556 7.20324 9.31598 7.63737Z" fill="white"/>
+                        <path d="M8.54064 9.95844H6.81643C6.59232 9.95844 6.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV8183 8.94643 17.5942V10.3642C8.94643 10.1401 8.76476 9.95844 8.54064 9.95844Z" fill="white"/>
+                        <path d="M17.9605 14.1268V17.6274C17.9605 17.7262 17.9213 17.821 17.8514 17.8909C17.7815 17.9607 17.6867 18 17.5879 18H15.7374C15.6385 18 15.5438 17.9607 15.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV0253C12.9016 12.0253 12.6695 13.1968 12.6205 13.7226V17.6353C12.6185 17.7322 12.5787 17.8245 12.5098 17.8926C12.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV9534 10.2312 17.926 10.1966 17.8913C10.1619 17.8567 10.1345 17.8155 10.1158 17.7702C10.0972 17.7249 10.0877 17.6764 10.0879 17.6274V10.3326C10.0877 10.2836 10.0972 10.2349 10.1158 10.1895C10.1344 10.1442 10.1619 10.1029 10.1965 10.0681C10.2311 10.0333 10.2722 10.0058 10.3176 9.98693C10.3629 9.96811 10.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV0309 12.5198 10.0658C12.5552 10.1006 12.5833 10.1421 12.6025 10.188C12.6217 10.2338 12.6316 10.283 12.6316 10.3326V10.9642C13.0547 10.3326 13.6832 9.84 15.0205 9.84C17.9779 9.83842 17.9605 12.6063 17.9605 14.1268Z" fill="white"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_13_3237">
+                          <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+              </div>
+              </div>
+              <!-- third member -->
+              <div>
+                <div class="flex flex-col justify-center items-center mt-3">
+                  <img src="./images/member3.png" alt="">
+                  <h1>Rokib Hossain</h1>
+                  <p>Fruits Expert</p>
+                  <!-- icons part -->
+                  <div class="flex gap-3 mt-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <g clip-path="url(#clip0_13_3226)">
+                        <path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="#F85559"/>
+                        <path d="M15.8017 10.5791L15.5604 12.6695C15.5503 12.7649 15.5056 12.8533 15.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV362 12.9046 19.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV3591 19.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV2531 10.2272 19.2164V13.02H8.59081C8.53941 13.0195 8.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV23175 12.7746C8.21258 12.7269 8.20299 12.6759 8.20353 12.6245L8.19535 10.5341C8.19463 10.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV1883 8.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV6581 4.5H15.3299C15.3816 4.50053 15.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV6906 4.74716C15.7098 4.79517 15.7193 4.84649 15.7185 4.89818V6.65727C15.7193 6.70896 15.7098 6.76028 15.6906 6.8083C15.6714 6.85631 15.643 6.90007 15.6069 6.93706C15.5708 6.97405 15.5277 7.00355 15.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV38909V10.1359H15.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV3131 15.7722 10.3622 15.7882 10.4152C15.8043 10.4683 15.8088 10.5241 15.8017 10.5791Z" fill="white"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_13_3226">
+                          <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <g clip-path="url(#clip0_13_3231)">
+                        <path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="#F85559"/>
+                        <path d="M19.773 7.17948C19.1883 7.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV0306 6.55299 17.3178 6.69317C16.881 6.22603 16.3137 5.90115 15.6898 5.76078C15.0658 5.6204 14.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV8041 8.87211C11.8018 9.11622 11.8267 9.35982 11.8783 9.59843C10.6104 9.53615 9.36981 9.20709 8.23771 8.63274C7.1056 8.05839 6.10739 7.25167 5.30829 6.26527C4.89754 6.96697 4.77029 7.79905 4.95254 8.59143C5.13478 9.38382 5.61278 10.0767 6.28881 10.5284C5.78422 10.5148 5.29031 10.38 4.84881 10.1353V10.17C4.85023 10.9055 5.10482 11.6181 5.56978 12.188C6.03474 12.7579 6.68172 13.1504 7.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV16832 13.9826 6.56559 14.5357 7.09913 14.9332C7.63268 15.3307 8.27629 15.5532 8.94145 15.57C7.81427 16.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV3227 9.12618 18.3158C14.992 18.3158 18.1988 13.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV17948Z" fill="white"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_13_3231">
+                          <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <g clip-path="url(#clip0_13_3237)">
+                        <path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="#F85559"/>
+                        <path d="M9.31598 7.63737C9.31629 7.96166 9.2204 8.27875 9.04043 8.54851C8.86046 8.81828 8.6045 9.02859 8.30496 9.15284C8.00542 9.27708 7.67575 9.30967 7.35768 9.24648C7.03961 9.18329 6.74743 9.02716 6.51812 8.79786C6.28882 8.56855 6.13269 8.27637 6.0695 7.9583C6.00631 7.64023 6.0389 7.31056 6.16315 7.01102C6.28739 6.71148 6.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV83595 6.48004C9.14292 6.78701 9.31556 7.20324 9.31598 7.63737Z" fill="white"/>
+                        <path d="M8.54064 9.95844H6.81643C6.59232 9.95844 6.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV8183 8.94643 17.5942V10.3642C8.94643 10.1401 8.76476 9.95844 8.54064 9.95844Z" fill="white"/>
+                        <path d="M17.9605 14.1268V17.6274C17.9605 17.7262 17.9213 17.821 17.8514 17.8909C17.7815 17.9607 17.6867 18 17.5879 18H15.7374C15.6385 18 15.5438 17.9607 15.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV0253C12.9016 12.0253 12.6695 13.1968 12.6205 13.7226V17.6353C12.6185 17.7322 12.5787 17.8245 12.5098 17.8926C12.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV9534 10.2312 17.926 10.1966 17.8913C10.1619 17.8567 10.1345 17.8155 10.1158 17.7702C10.0972 17.7249 10.0877 17.6764 10.0879 17.6274V10.3326C10.0877 10.2836 10.0972 10.2349 10.1158 10.1895C10.1344 10.1442 10.1619 10.1029 10.1965 10.0681C10.2311 10.0333 10.2722 10.0058 10.3176 9.98693C10.3629 9.96811 10.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV0309 12.5198 10.0658C12.5552 10.1006 12.5833 10.1421 12.6025 10.188C12.6217 10.2338 12.6316 10.283 12.6316 10.3326V10.9642C13.0547 10.3326 13.6832 9.84 15.0205 9.84C17.9779 9.83842 17.9605 12.6063 17.9605 14.1268Z" fill="white"/>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_13_3237">
+                          <rect width="24" height="24" fill="white"/>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </div>
+              </div>
+              </div>
+              <!-- fourth member -->
+              <div>
+                <div>
+                  <div class="flex flex-col justify-center items-center mt-3">
+                    <img src="./images/member4.png" alt="">
+                    <h1>Chaity</h1>
+                    <p>Fruits Expert</p>
+                    <!-- icons part -->
+                    <div class="flex gap-3 mt-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <g clip-path="url(#clip0_13_3226)">
+                          <path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="#F85559"/>
+                          <path d="M15.8017 10.5791L15.5604 12.6695C15.5503 12.7649 15.5056 12.8533 15.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV362 12.9046 19.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV3591 19.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV2531 10.2272 19.2164V13.02H8.59081C8.53941 13.0195 8.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV23175 12.7746C8.21258 12.7269 8.20299 12.6759 8.20353 12.6245L8.19535 10.5341C8.19463 10.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV1883 8.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV6581 4.5H15.3299C15.3816 4.50053 15.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV6906 4.74716C15.7098 4.79517 15.7193 4.84649 15.7185 4.89818V6.65727C15.7193 6.70896 15.7098 6.76028 15.6906 6.8083C15.6714 6.85631 15.643 6.90007 15.6069 6.93706C15.5708 6.97405 15.5277 7.00355 15.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV38909V10.1359H15.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV3131 15.7722 10.3622 15.7882 10.4152C15.8043 10.4683 15.8088 10.5241 15.8017 10.5791Z" fill="white"/>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_13_3226">
+                            <rect width="24" height="24" fill="white"/>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <g clip-path="url(#clip0_13_3231)">
+                          <path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="#F85559"/>
+                          <path d="M19.773 7.17948C19.1883 7.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV0306 6.55299 17.3178 6.69317C16.881 6.22603 16.3137 5.90115 15.6898 5.76078C15.0658 5.6204 14.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV8041 8.87211C11.8018 9.11622 11.8267 9.35982 11.8783 9.59843C10.6104 9.53615 9.36981 9.20709 8.23771 8.63274C7.1056 8.05839 6.10739 7.25167 5.30829 6.26527C4.89754 6.96697 4.77029 7.79905 4.95254 8.59143C5.13478 9.38382 5.61278 10.0767 6.28881 10.5284C5.78422 10.5148 5.29031 10.38 4.84881 10.1353V10.17C4.85023 10.9055 5.10482 11.6181 5.56978 12.188C6.03474 12.7579 6.68172 13.1504 7.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV16832 13.9826 6.56559 14.5357 7.09913 14.9332C7.63268 15.3307 8.27629 15.5532 8.94145 15.57C7.81427 16.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV3227 9.12618 18.3158C14.992 18.3158 18.1988 13.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV17948Z" fill="white"/>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_13_3231">
+                            <rect width="24" height="24" fill="white"/>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <g clip-path="url(#clip0_13_3237)">
+                          <path d="M12 24C18.6274 24 24 18.6274 24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 18.6274 5.37258 24 12 24Z" fill="#F85559"/>
+                          <path d="M9.31598 7.63737C9.31629 7.96166 9.2204 8.27875 9.04043 8.54851C8.86046 8.81828 8.6045 9.02859 8.30496 9.15284C8.00542 9.27708 7.67575 9.30967 7.35768 9.24648C7.03961 9.18329 6.74743 9.02716 6.51812 8.79786C6.28882 8.56855 6.13269 8.27637 6.0695 7.9583C6.00631 7.64023 6.0389 7.31056 6.16315 7.01102C6.28739 6.71148 6.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV83595 6.48004C9.14292 6.78701 9.31556 7.20324 9.31598 7.63737Z" fill="white"/>
+                          <path d="M8.54064 9.95844H6.81643C6.59232 9.95844 6.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV8183 8.94643 17.5942V10.3642C8.94643 10.1401 8.76476 9.95844 8.54064 9.95844Z" fill="white"/>
+                          <path d="M17.9605 14.1268V17.6274C17.9605 17.7262 17.9213 17.821 17.8514 17.8909C17.7815 17.9607 17.6867 18 17.5879 18H15.7374C15.6385 18 15.5438 17.9607 15.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV0253C12.9016 12.0253 12.6695 13.1968 12.6205 13.7226V17.6353C12.6185 17.7322 12.5787 17.8245 12.5098 17.8926C12.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV9534 10.2312 17.926 10.1966 17.8913C10.1619 17.8567 10.1345 17.8155 10.1158 17.7702C10.0972 17.7249 10.0877 17.6764 10.0879 17.6274V10.3326C10.0877 10.2836 10.0972 10.2349 10.1158 10.1895C10.1344 10.1442 10.1619 10.1029 10.1965 10.0681C10.2311 10.0333 10.2722 10.0058 10.3176 9.98693C10.3629 9.96811 10.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV0309 12.5198 10.0658C12.5552 10.1006 12.5833 10.1421 12.6025 10.188C12.6217 10.2338 12.6316 10.283 12.6316 10.3326V10.9642C13.0547 10.3326 13.6832 9.84 15.0205 9.84C17.9779 9.83842 17.9605 12.6063 17.9605 14.1268Z" fill="white"/>
+                        </g>
+                        <defs>
+                          <clipPath id="clip0_13_3237">
+                            <rect width="24" height="24" fill="white"/>
+                          </clipPath>
+                        </defs>
+                      </svg>
+                    </div>
+                </div>
+                </div>
+              </div>
+               </div>
+
+          </div>
         </div>
+      </div>
+     </section>
         
     </main>
 
-    <footer>
+    <footer class="footer footer-center p-10 bg-black text-white">
 
+      <div class="flex flex-row justify-center">
+        <img src="./images/logo.png" alt="">
+          <p>Fruit Burst</p>
+      </div>
 
+      <div class="grid grid-flow-col gap-12">
+        <a class="link link-hover">About us</a> 
+        <a class="link link-hover">Contact</a> 
+        <a class="link link-hover">Jobs</a> 
+        <a class="link link-hover">Press kit</a>
+      </div> 
+      <div>
+        <div class="grid grid-flow-col gap-4">
+          <i class="fa-brands fa-facebook" style="color: #0561ff; font-size: 30px;"></i>
+          <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRyFTLRNyDmT1a1boZV385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a> 
+          <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
+        </div>
+      </div> 
     </footer>
-
 
 </body>
 </html>
